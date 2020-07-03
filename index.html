@@ -11,12 +11,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+
+        function sideBar() {
+            if (document.getElementById("mySidebar").style.width == "190px") {
+                document.getElementById("mySidebar").style.width = "0";
+            } else {
+                document.getElementById("mySidebar").style.width = "190px";
+            }
+        }
+    </script>
+
+
+
 </head>
 
 <body>
     <!---------------------------------------------------------- NAVBAR------------------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Todo-list</a>
+    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #0099ff;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,27 +41,75 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="About.html">About</a>
+                    <a class="nav-link" id="myLists" onclick="sideBar()">
+
+                        <i class="fa fa-bars" aria-hidden="true""></i>
+                       </a>
                 </li>
+
+                <li class=" nav-item active">
+                            <a class="nav-link" href="index.html" id="Home"> <i class="fa fa-fw fa-home"></i>Home
+                                <span class="sr-only">(current)</span></a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html"><i class="fa fa-info" aria-hidden="true"></i>
+                        About</a>
+                </li>
+
+
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item" id="login" style="float: right;">
-                    <a class="nav-link" href="Login">Login</a>
+                    <a class="nav-link" href="Login"><i class="fa fa-fw fa-user"></i>Login</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-<!--------------------------------------------------------------- INPUT and DISPLAY --------------------------------------------------->
+    <!---------------------------------------------- collapsed sidebar ------------------------------------------------->
+
+
+    <div id="mySidebar" class="sidebar">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+
+
+    <!--------------------------------------------------------------- INPUT and DISPLAY --------------------------------------------------->
+
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-ellipsis-h" aria-hidden="true" id="dotsIcon"></i>
+
+        </button>
+
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+
+
     <div class="input-group justify-content-center" style="width: 600px;" id="input">
         <input type="text" class="form-control " id="inputText">
         <span class="input-group-btn">
-            <button class="btn btn-outline-danger" type="button" id="submit">Go!</button>
+            <button class="btn btn-outline-danger" type="button" id="submit">Add</button>
         </span>
     </div><!-- /input-group -->
 
@@ -54,16 +119,20 @@
 
         </table>
     </div>
-<!------------------------------------------------------------------------------------------------------------------------------------>
 
+
+
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------------>
 
 
     <script src="scripts.js"></script>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
