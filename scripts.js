@@ -36,3 +36,11 @@ function populate(element) {
 
     display.appendChild(tableRow);
 }
+
+function rearrangeOrder() {
+    let tbl = document.getElementById('mytable');
+    let rows = tbl.getElementsByTagName('tr');
+    let firstRow = rows[0];
+    let lastRow = rows[rows.length];
+    firstRow.parentNode.insertBefore(lastRow.parentNode.removeChild(lastRow), firstRow);
+}
