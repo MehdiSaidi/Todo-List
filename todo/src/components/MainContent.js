@@ -10,6 +10,7 @@ class MainContent extends React.Component {
       hideCompleted: false,
     };
   }
+
   test() {
     this.setState({
       hideCompleted: false,
