@@ -1,0 +1,204 @@
+#login {
+  float: right;
+}
+
+#input {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+button {
+  margin-left: 20px;
+}
+
+#submit {
+  margin-left: 10px;
+  height: 36px;
+}
+
+.todoItem {
+  margin-left: 25px;
+}
+
+label {
+  margin-left: 20px;
+  float: left;
+  display: inline-block;
+  width: 420px;
+}
+
+#display {
+  margin-top: 20px;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+label {
+  margin-left: 20px;
+  float: left;
+  display: inline-block;
+  width: 420px;
+}
+
+input[type=checkbox]:checked~.remove-check {
+  display: none;
+}
+
+[type=checkbox]:checked+label {
+  text-decoration: line-through;
+}
+
+.dropdown {
+  float: right;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+#dotsIcon {
+  color: rgba(57, 56, 61, 0.623);
+}
+
+#dotsIcon:hover {
+  color: rgb(0, 0, 0);
+}
+
+#dropdownMenuButton {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar {
+  padding-top: 0.25rem;
+  /* 0px does not look good on small screens */
+  padding-bottom: 0.25rem;
+  font-size: smaller;
+  /* Just because I am using big size font */
+  line-height: 1em;
+}
+
+#inputText:focus {
+  width: 50px !important;
+}
+
+.MainContent {
+  margin-top: 100px;
+}
+
+/* --------------------------------------------------- SIDEBAR ----------------------------------------------------- */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(230, 227, 227, 0.24);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top: 42px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* ---------------------------------------- todolist paper effect ------------------------------------------ */
+
+/* body {
+  background: linear-gradient(#ccc, #fff);
+} */
+
+.letter {
+  background: #fff;
+  font-family: Architects Daughter;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 37%;
+  margin-right: 485px;
+}
+
+.letter:before, .letter:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.letter:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.637);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+
+.letter:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.692);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
